@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0a0f0d;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.terminal-text {
+  position: relative;
+  font-family: 'Source Code Pro', monospace;
+  color: #00ff41;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+  white-space: pre-line;
+  display: inline-block;
+}
+
+.terminal-text::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  height: 100%;
+  width: 8px;
+  background: #00ff41;
+  animation: terminal-blink 1s step-end infinite;
+}
+
+@layer components {
+  .project-card {
+    @apply bg-terminal-black border border-dim-matrix rounded-lg p-4 
+           transition-all duration-300 hover:border-matrix-green;
+  }
+
+  .skill-card {
+    @apply bg-terminal-black border border-dim-matrix rounded-lg p-4 
+           transition-all duration-300 hover:border-matrix-green;
+  }
+
+  .projects-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6;
+  }
+}
+
+.project-card:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.skill-card:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Form input autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #00ff41;
+  -webkit-box-shadow: 0 0 0px 1000px #0a0f0d inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
