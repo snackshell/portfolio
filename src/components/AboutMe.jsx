@@ -65,23 +65,19 @@ const AboutMe = () => {
           <h2 className="text-matrix-green text-xl font-mono mb-4 border-b-2 border-matrix-green pb-2">{'> About_Me'}</h2>
           <div className="max-w-2xl mx-auto space-y-3 prose prose-invert">
             <p className="text-[#50fa7b] leading-relaxed text-sm">
-              Hi, I'm Adonay! I'm 21 years old and a self-taught programmer with a big passion for Artificial Intelligence and Machine Learning. I love AI... it fascinates me every single day. My journey into this field hasn't been easy, but the challenges I've faced have only made me more determined and given me a clear sense of purpose.
+              Hey, I'm Adonay. I'm a 21 year old self-taught programmer with a deep passion for Artificial Intelligence and Machine Learning. Every day I feel fascinated by AI since studying this field has established both my determination and my sense of purpose.
             </p>
             
             <p className="text-[#50fa7b] leading-relaxed text-sm">
-              I was born and raised in Tigray, Ethiopia. Growing up, I didn't have much exposure to formal computer science. When I reached grade 12, life threw some big obstacles my way. The COVID-19 pandemic hit, followed by local conflicts, and schools were shut down for nearly four years. It felt like my future was slipping away.
+              Born and raised in Ethiopia, I had limited exposure to formal computer science education. Despite challenges, I taught myself to code and became captivated by how technology can transform lives. Every small achievement fueled my curiosity and drive.
             </p>
             
             <p className="text-[#50fa7b] leading-relaxed text-sm">
-              But instead of giving up, I focused on what I could control. I started teaching myself how to code and got really curious about how technology could change lives. Learning on my own wasn't easy, especially with limited resources, but every small win felt like a huge step forward.
+              My present goal is to establish an AI and ML career because I want to close technological disparities particularly within neglected geographical areas. AI possesses the capability to transform technology, healthcare and agriculture and education and I intend to participate in this transformative change process.
             </p>
             
             <p className="text-[#50fa7b] leading-relaxed text-sm">
-              What started as curiosity has now turned into my mission. I want to build a career in AI and ML to help close the technology gap, especially in regions like mine. I believe AI has incredible potential to improve healthcare, agriculture, and education in underserved communities, and I want to be part of the team making that happen.
-            </p>
-            
-            <p className="text-[#50fa7b] leading-relaxed text-sm">
-              Over the past few years, I've stayed committed to learning and growing, even when the road was tough. Every project I finish and every line of code I write brings me closer to my goal. This journey has taught me resilience, adaptability, and the importance of staying focused on my dreams.
+              Learning on my own hasn’t always been easy, but every project I finish and every line of code I write feels like a step closer to my dreams. This journey has taught me so much—how to adapt, stay resilient, and keep my eyes on what really matters.
             </p>
             
             <div className="border-t-2 border-matrix-green pt-3 mt-4">
