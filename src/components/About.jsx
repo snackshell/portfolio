@@ -13,7 +13,7 @@ import React from 'react';
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <p className="text-lg mb-4">
-              I'm Adonay Solomon, a 21-year-old AI developer from Mekele, Ethiopia.
+              I'm Adonay Solomon, a 21-year-old AI developer from Ethiopia.
               My passion lies in creating innovative solutions using artificial intelligence.
             </p>
             <h3 className="text-2xl font-semibold mb-4">What drives me?</h3>
