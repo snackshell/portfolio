@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@400;600&family=Rajdhani:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-black text-terminal-green font-jetbrains;
+    background-image: 
+      repeating-linear-gradient(
+        to right,
+        rgba(0, 255, 65, 0.05) 0px,
+        rgba(0, 255, 65, 0.05) 1px,
+        transparent 1px,
+        transparent 30px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 65, 0.05) 0px,
+        rgba(0, 255, 65, 0.05) 1px,
+        transparent 1px,
+        transparent 30px
+      );
+    background-size: 30px 30px;
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: 
+      repeating-linear-gradient(
+        to right,
+        theme(colors.grid-line) 0px,
+        theme(colors.grid-line) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        theme(colors.grid-line) 0px,
+        theme(colors.grid-line) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+    background-size: 40px 40px;
+    background-attachment: fixed;
+  }
+  .text-glow {
+    text-shadow: 0 0 8px rgba(0, 255, 153, 0.6);
+  }
+  .text-glow-strong {
+    text-shadow: 0 0 12px rgba(0, 255, 153, 0.8);
+  }
+  .neon-border-glow {
+    box-shadow: 0 0 8px rgba(0, 255, 153, 0.4);
+  }
+  .shadow-glow {
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2),
+                inset 0 0 10px rgba(0, 255, 65, 0.1);
+  }
+  
+  .animate-matrix-glow {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5),
+                 0 0 20px rgba(0, 255, 65, 0.3);
+  }
+
+  .animate-terminal-blink {
+    animation: blink 1s step-end infinite;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@layer components {
+  .terminal-container {
+    @apply bg-cyber-black/80 border border-terminal-dim rounded-lg p-4 
+           backdrop-blur-sm transition-all duration-300;
+  }
+
+  .terminal-title {
+    @apply font-orbitron text-terminal-green text-2xl md:text-3xl mb-6 
+           animate-matrix-glow;
+  }
+
+  .terminal-text {
+    @apply font-jetbrains text-terminal-green whitespace-pre-line;
+  }
+
+  .terminal-button {
+    @apply px-6 py-3 bg-transparent border-2 font-jetbrains
+           transition-all duration-300 rounded-md;
+  }
+
+  .terminal-input {
+    @apply w-full bg-cyber-black border-2 border-terminal-dim rounded-md px-4 py-2
+           text-terminal-green font-jetbrains focus:border-terminal-green
+           focus:outline-none transition-all duration-300;
+  }
+
+  .terminal-link {
+    @apply text-cyber-blue hover:text-terminal-green transition-colors duration-300
+           underline decoration-2 underline-offset-4;
+  }
+
+  .project-card {
+    @apply bg-cyber-black border border-terminal-dim rounded-lg p-4 
+           transition-all duration-300 hover:border-terminal-green shadow-glow;
+  }
+
+  .skill-card {
+    @apply bg-cyber-black border-2 border-terminal-dim rounded-lg p-4 
+           transition-all duration-300 relative overflow-hidden;
+  }
+
+  .skill-card:hover {
+    @apply border-terminal-green;
+  }
+
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(0, 255, 65, 0.1),
+      transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .skill-card:hover::before {
+    transform: translateX(100%);
+  }
+
+  .projects-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6;
+  }
+}
+
+.project-card:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Form input autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #00ff41;
+  -webkit-box-shadow: 0 0 0px 1000px #0a0f0d inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@layer utilities {
+  .cursor-glow {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+  }
+}
